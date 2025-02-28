@@ -35,6 +35,7 @@ fun  ProductListScreen(viewModel: MainViewModel = viewModel()) {
                 LazyColumn(
                     contentPadding = PaddingValues(16.dp)
                 ) {
+                    if(posts!=null)
                     items(posts!!.products) { post ->
                         PostItem(post = post)
                     }
